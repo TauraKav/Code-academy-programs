@@ -28,7 +28,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:25px 35px;
+  padding-top:25px;
+  padding-bottom:25px;
+  padding-left:35px;
   background-image: url("/img/banner.jpg");
   background-size: 35%;
   background-repeat: no-repeat;
@@ -38,8 +40,6 @@
 .bg-image svg {
 fill: blue;
 }
-
-
 
   h1.page-title {
     font-size: 60px;
@@ -61,7 +61,6 @@ h2.selector-title,
 }
 
 .course {
-  width: calc((100% - 30px) / 2);
   background-color: white;
 position:relative;
 padding: 40px 40px 20px;
@@ -97,8 +96,6 @@ span.label {
 }
 
 .programs-options {
-  /* display: flex;
-  flex-wrap: wrap; */
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: repeat (10, 1fr);
@@ -112,7 +109,6 @@ gap: 30px;
 .course{ 
   grid-column: span 1;
   grid-row: span 1;
-  width: 100%;
 }
 
 .programs-wrapper {
@@ -174,4 +170,56 @@ button {
   width: 100%;
 }
 
+
+@media screen and (max-width: 999px) {
+
+  .programs-options { width: 60%;
+    grid-template-columns: 1fr;
+  }
+  .programs-selector {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+
+  .programs-options { width: 100%;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .programs-selector{
+    width: 100%;
+    display:none;
+  }
+  .programs-wrapper{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .main-content{
+    padding-left: 15px;
+  }
+
+span.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+    a.bg-image {
+      padding-bottom: 150px;
+      padding-top: 45px;
+      align-items: flex-start;
+    font-size: 30px;
+  background-size: 87%;
+}
+  }
+
+  
+
+  @media screen and (max-width: 600px){
+    .programs-options{
+      grid-template-columns: 1fr;
+    }
+    .bg-img {
+    background-size: 70%;
+    }
+  }
 
