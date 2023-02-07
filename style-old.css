@@ -1,0 +1,225 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f2f2f2;
+  }
+
+.content-wrapper{
+  max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pink-color {
+  color: #ff00ec;
+}
+.black-color {
+  color: black;
+}
+
+.bg-image {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:25px;
+  padding-bottom:25px;
+  padding-left:35px;
+  background-image: url("/img/banner.jpg");
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 80% 85%;
+}
+
+.bg-image svg {
+fill: blue;
+}
+
+  h1.page-title {
+    font-size: 60px;
+  }
+
+  .main-content a img{
+  height: 80px;
+  width: 100%;
+  }
+
+  .programs-selector {
+    background-color: white;
+    padding: 45px 40px 40px;
+    width: 35%;
+}
+h2.selector-title,
+.selector-element {
+  margin: 0px 0px 15px;
+}
+
+.course {
+  background-color: white;
+position:relative;
+padding: 40px 40px 20px;
+}
+
+.course a {
+  text-decoration: none;
+  color: black;
+ height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course a img{
+width: 100px;
+height: 100px;
+}
+
+span.label {
+  border-radius: 30px;
+  background-color: #ff00ec;
+  padding: 9px 12px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: white;
+  position:absolute;
+  right: -15px;
+  top:20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-align: center;
+}
+
+.programs-options {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: repeat (10, 1fr);
+width: 65%;
+gap: 30px;
+  padding-left: 30px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+}
+
+.course{ 
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.programs-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+  
+}
+
+ul.features{
+  display: flex;
+  flex-wrap:wrap;
+  padding-left: 0px;
+  list-style-type: none;
+  column-gap: 15px;
+  row-gap: 8px;
+}
+
+ul.features li {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: smaller;
+  display: flex;
+  align-items:flex-start;
+}
+
+.icon-cap::before{
+  content: url(/img/kepurėlė.svg) 
+}
+
+.icon-moon::before{
+  content: url(/img/mėnulis.svg) 
+}
+.icon-sun::before{
+  content: url(/img/saulutė.svg) 
+}
+
+.programs-selector {
+  position: sticky;
+  top: 10px;
+}
+
+.selector-element {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset{
+  border:0;
+  padding: 0px;
+}
+
+fieldset .form-control {
+  flex-direction: row;
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 999px) {
+
+  .programs-options { width: 60%;
+    grid-template-columns: 1fr;
+  }
+  .programs-selector {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+
+  .programs-options { width: 100%;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .programs-selector{
+    width: 100%;
+    display:none;
+  }
+  .programs-wrapper{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .main-content{
+    padding-left: 15px;
+  }
+
+span.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+    a.bg-image {
+      padding-bottom: 150px;
+      padding-top: 45px;
+      align-items: flex-start;
+    font-size: 30px;
+  background-size: 87%;
+}
+  }
+
+  
+
+  @media screen and (max-width: 600px){
+    .programs-options{
+      grid-template-columns: 1fr;
+    }
+    .bg-img {
+    background-size: 70%;
+    }
+  }
+
