@@ -1,0 +1,39 @@
+$width-xl: 999px;
+$width-md: 799px;
+$width-sm: 599px;
+
+
+@mixin xl {
+  @media (max-width: $width-xl) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $width-md) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $width-sm) {
+    @content;
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,51 @@
+@use'base';
+
+.bg-image {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 35px;
+    background-image: url("/img/banner.jpg");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 80% 85%;
+
+    &.svg {
+      fill: blue;
+    }
+
+    @include base.md {
+      padding-bottom: 150px;
+      padding-top: 45px;
+      align-items: flex-start;
+      font-size: 30px;
+      background-size: 87%;
+    }
+
+    @include base.sm {
+      background-size: 70%;
+    }
+
+    .link-wrapper {
+      @include base.md {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+      }
+
+      .pink-color {
+        color: #ff00ec;
+      }
+
+      .black-color {
+        color: black;
+      }
+    }
+  }

@@ -1,0 +1,42 @@
+@use'base';
+
+.programs-selector {
+    background-color: white;
+    padding: 45px 40px 40px;
+    width: 35%;
+    position: sticky;
+    top: 10px;
+
+    @include base.xl {
+      width: 40%;
+    }
+
+    @include base.md {
+      width: 100%;
+      display: none;
+    }
+
+    .selector-title {
+      margin: 0px 0px 15px;
+    }
+
+    .selector-element {
+      margin: 0px 0px 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0px;
+
+      .form-control {
+        flex-direction: row;
+      }
+    }
+
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
